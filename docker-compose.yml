@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  antmedia:
+    build:
+      context: .
+      args: 
+        - AntMediaServer=ant-media-server-community-1.8.1-20190828_0800.zip
+    ports:
+      - "5080:5080"
+      - "1935:1935"
+      - "5443:5443"
+      - "5554:5554"
+      # - "6000-65000:6000-65000"
+    cap_add:
+      - DAC_READ_SEARCH
+    stdin_open: true
+    tty: true
