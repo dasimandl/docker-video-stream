@@ -15,3 +15,13 @@ services:
       - DAC_READ_SEARCH
     stdin_open: true
     tty: true
+    # restart: always 
+  #   links:
+  #     - mongo
+  # mongo:
+  #   container_name: mongo
+  #   image: mongo
+  #   volumes:
+  #     - ./data:/data/db
+  #   ports:
+  #     - "27017:27017"
